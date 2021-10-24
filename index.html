@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Baptise Fast!</title>
+    <meta
+      name="description"
+      content="it's never too late to get baptised."
+    />
+  </head>
+  <body>
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+        overflow: hidden; /* Hide scrollbars */
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        background-color: #262626;
+      }
+      img {
+        width: 20%;
+      }
+      h1 {
+        -webkit-text-stroke-width: 2.5px;
+        -webkit-text-stroke-color: white;
+        font-weight: bold;
+        font-size: 3em;
+        letter-spacing: 10px;
+      }
+      h2 {
+        color: #fff;
+      }
+      .baptised {
+        -webkit-text-stroke-width: 2.5px;
+        -webkit-text-stroke-color: white;
+        font-weight: bold;
+        font-size: 3em;
+        letter-spacing: 10px;
+        color: #000;
+      }
+      #clickBaptise {
+        cursor: pointer;
+      }
+      #priest {
+        cursor: pointer;
+      }
+      .info {
+        position: absolute;
+        bottom: 0px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+        font-weight: bold;
+        font-size: 2em;
+        color: #000;
+      }
+    </style>
+
+    <div class="row d-flex text-center">
+      <h1 class="text-center w-100 mt-2">QUICK BAPTISE</h1>
+      <div class="col-md-12 justify-content-center">
+        <img
+          class="img-fluid"
+          src="dayi.png"
+          alt="clickandbaptise"
+          id="priest"
+        />
+        <audio src="sound.m4a" id="baptise-sound"></audio>
+        <h2 id="clickBaptise">
+          <span class="text-danger">Click</span> to get baptised
+        </h2>
+        <h2 id="baptised" class="baptised" style="display: none">
+          you got BAPTISED!
+        </h2>
+      </div>
+      <div class="col-md-12 info">it's never too late to get baptised.</div>
+    </div>
+
+    <script>
+      var counter = 0;
+      var priest = document.getElementById("priest");
+      var baptiseSound = document.getElementById("baptise-sound");
+      var clickBaptise = document.getElementById("clickBaptise");
+      var baptised = document.getElementById("baptised");
+
+      priest.onclick = function quickBaptise() {
+        if (counter == 0) {
+          priest.src = "dayismiling.png";
+          baptiseSound.play();
+          baptised.style.display = "block";
+          clickBaptise.style.display = "none";
+        }
+        counter++;
+      };
+      clickBaptise.onclick = function quickBaptise() {
+        if (counter == 0) {
+          priest.src = "dayismiling.png";
+          baptiseSound.play();
+          clickBaptise.style.display = "none";
+          baptised.style.display = "block";
+        }
+        counter++;
+      };
+    </script>
+  </body>
+</html>
